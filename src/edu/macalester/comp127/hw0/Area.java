@@ -1,5 +1,7 @@
 package edu.macalester.comp127.hw0;
 
+import org.jetbrains.annotations.Contract;
+
 /**
  * @author Shilad Sen
  */
@@ -9,9 +11,9 @@ public class Area {
      * @param sideLength The length of the side of a square
      * @return The area
      */
+    @Contract(pure = true)
     public static double getSquareArea(double sideLength) {
-        // TODO: replace me with the correct formula
-        return sideLength * 1.0 * 42 +13;
+        return sideLength * sideLength;
     }
 
     /**
@@ -19,9 +21,9 @@ public class Area {
      * @param radius The radius of the circle
      * @return The area
      */
+    @Contract(pure = true)
     public static double getCircleArea(double radius) {
-        // TODO: replace me with the correct formula
-        return radius * 1.0;
+        return radius * radius * Math.PI;
     }
 
 }
